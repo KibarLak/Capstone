@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_login"
+    tools:context=".Splash_Screen">
+
+    <TextView
+        android:id="@+id/Head"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="100dp"
+        android:fontFamily="sans-serif-black"
+        android:text="Dr. Potato"
+        android:textColor="#F88A2D"
+        android:textSize="60sp">
+
+    </TextView>
+
+    <ImageView
+        android:id="@+id/Welcome_Image"
+        android:layout_width="200dp"
+        android:layout_height="400dp"
+        android:layout_centerInParent="true"
+        android:src="@drawable/welcome_image">
+
+    </ImageView>
+    <TextView
+        android:id="@+id/Text1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="650dp"
+        android:textAlignment="center"
+        android:text="Aplikasi deteksi hama pada tanaman kentang"
+        android:textColor="#4E4848"
+        android:textSize="20sp">
+
+    </TextView>
+
+
+
+</RelativeLayout>
