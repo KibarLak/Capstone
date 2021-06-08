@@ -81,10 +81,11 @@ public class DiseaseAdapter extends RecyclerView.Adapter<DiseaseAdapter.DiseaseV
 
         Glide.with(holder.imageView.getContext())
                 .load(potatoes.get(position).getImageUrl())
+                .override(55, 55)
                 .apply(
-                        RequestOptions.overrideOf(60, 60)
-                                .placeholder(shimmerDrawable)
+                        RequestOptions.overrideOf(55, 55)
                                 .error(R.drawable.ic_broken_image_24)
+                                .override(55, 55)
                 )
                 .into(holder.imageView);
         holder.textView.setText(potatoes.get(position).getName());

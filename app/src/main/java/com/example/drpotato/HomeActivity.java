@@ -17,6 +17,7 @@ public class HomeActivity extends AppCompatActivity {
 
     private ActivityHomeBinding binding;
     private AppBarConfiguration appBarConfiguration;
+    private NavController navController;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -30,7 +31,7 @@ public class HomeActivity extends AppCompatActivity {
         appBarConfiguration = new AppBarConfiguration.Builder(
                 R.id.navigation_home, R.id.navigation_disease)
                 .build();
-        NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment_activity_home);
+        navController = Navigation.findNavController(this, R.id.nav_host_fragment_activity_home);
         NavigationUI.setupActionBarWithNavController(this, navController, appBarConfiguration);
         NavigationUI.setupWithNavController(binding.navView, navController);
 
