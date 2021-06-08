@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/navigation_home">
+
+    <fragment
+        android:id="@+id/navigation_home"
+        android:name="com.example.drpotato.ui.home.HomeFragment"
+        android:label="@string/title_home"
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_navigation_home_to_predict_result_fragment"
+            app:destination="@id/predict_result_fragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_disease"
+        android:name="com.example.drpotato.ui.disease.DiseaseFragment"
+        android:label="Penyakit"
+        tools:layout="@layout/fragment_disease" >
+        <action
+            android:id="@+id/action_navigation_disease_to_navigation_detail_disease"
+            app:destination="@id/navigation_detail_disease" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_detail_disease"
+        android:name="com.example.drpotato.ui.disease.DetailDiseaseFragment"
+        android:label="Detail Penyakit"
+        tools:layout="@layout/fragment_predict_result" />
+
+    <fragment
+        android:id="@+id/predict_result_fragment"
+        android:name="com.example.drpotato.ui.home.PredictResultFragment"
+        android:label="@string/title_result_prediction"
+        tools:layout="@layout/fragment_predict_result" >
+        <action
+            android:id="@+id/action_predict_result_fragment_to_navigation_home"
+            app:destination="@id/navigation_home" />
+    </fragment>
+
+</navigation>
